@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotina do Héroi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-image: url('1348444.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .titulo {
+            margin-top: 20px;
+            color: aliceblue;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        input, select, button {
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #1d38c3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1 class="titulo">Rotina do Héroi</h1>
+<div class="container">
+    <h1>Minhas Rotinas Diárias</h1>
+    <form id="rotinaForm">
+        <input type="text" id="tarefa" placeholder="Nome da tarefa">
+        <input type="text" id="descricao" placeholder="Descrição da tarefa">
+        <select id="duracao">
+            <option value="7:00-8:00">7:00 - 8:00</option>
+            <option value="8:00-9:00">8:00 - 9:00</option>
+            <option value="9:00-10:00">9:00 - 10:00</option>
+            <option value="10:00-11:00">10:00 - 11:00</option>
+            <option value="11:00-12:00">11:00 - 12:00</option>
+            <option value="12:00-13:00">12:00 - 13:00</option>
+            <option value="13:00-14:00">13:00 - 14:00</option>
+            <option value="14:00-15:00">14:00 - 15:00</option>
+            <option value="15:00-16:00">15:00 - 16:00</option>
+            <option value="16:00-17:00">16:00 - 17:00</option>
+            <option value="17:00-18:00">17:00 - 18:00</option>
+            <option value="18:00-19:00">18:00 - 19:00</option>
+            <option value="19:00-20:00">19:00 - 20:00</option>
+            <option value="20:00-21:00">20:00 - 21:00</option>
+            <option value="21:00-22:00">21:00 - 22:00</option>
+            <option value="22:00-23:00">22:00 - 23:00</option>
+            <option value="23:00-24:00">23:00 - 24:00</option>
+        </select>        <button type="submit">Adicionar</button>
+    </form>
+    <ul id="rotinaList"></ul>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, padrão para a maioria das páginas da web. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva, ajustando-a para diferentes dispositivos. -->
+    <title>Rotina do Héroi</title> <!-- Título da página, exibido na aba do navegador. -->
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte padrão do site como Arial. */
+            background-color: #f4f4f4; /* Define a cor de fundo como cinza claro. */
+            background-image: url('1348444.jpg'); /* Usa uma imagem de fundo (presumivelmente de um arquivo local). */
+            background-size: cover; /* A imagem de fundo cobre toda a tela, sem repetir. */
+            background-position: center; /* Centraliza a imagem de fundo. */
+            margin: 0; /* Remove margens ao redor da página. */
+            padding: 0; /* Remove preenchimento (padding) da página. */
+            height: 100vh; /* Define a altura do corpo da página para ocupar 100% da altura da tela. */
+            display: flex; /* Usa o modelo flexbox para alinhar o conteúdo. */
+            flex-direction: column; /* Organiza os elementos da página em uma coluna. */
+            align-items: center; /* Centraliza os elementos horizontalmente. */
+        }
+
+        .titulo {
+            margin-top: 20px; /* Adiciona uma margem superior de 20px. */
+            color: aliceblue; /* Define a cor do texto como 'aliceblue', um tom claro de azul. */
+        }
+
+        .container {
+            max-width: 600px; /* Define a largura máxima do contêiner como 600px. */
+            padding: 20px; /* Adiciona 20px de preenchimento interno em volta do conteúdo. */
+            background-color: rgba(255, 255, 255, 0.8); /* Define um fundo branco com 80% de opacidade. */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra ao redor do contêiner. */
+            margin-top: 20px; /* Adiciona uma margem superior de 20px. */
+        }
+
+        h1 {
+            text-align: center; /* Centraliza o texto dos títulos. */
+            margin-bottom: 20px; /* Adiciona uma margem inferior de 20px. */
+        }
+
+        form {
+            display: flex; /* Usa flexbox para organizar os elementos do formulário. */
+            justify-content: space-between; /* Distribui os elementos do formulário uniformemente. */
+            margin-bottom: 20px; /* Adiciona uma margem inferior de 20px. */
+        }
+
+        input, select, button {
+            margin-bottom: 10px; /* Adiciona uma margem inferior de 10px para inputs, selects e botões. */
+            padding: 10px; /* Adiciona preenchimento interno de 10px ao redor do conteúdo desses elementos. */
+        }
+
+        button {
+            padding: 10px 20px; /* Define o preenchimento do botão, com mais espaço horizontal (20px). */
+            background-color: #1d38c3; /* Define a cor de fundo do botão como um azul escuro. */
+            color: white; /* Define a cor do texto no botão como branco. */
+            border: none; /* Remove a borda do botão. */
+            cursor: pointer; /* Muda o cursor para uma mãozinha quando passar sobre o botão, indicando que é clicável. */
+        }
+    </style>
+</head>
+<body>
+<h1 class="titulo">Rotina do Héroi</h1> <!-- Cabeçalho principal com o título "Rotina do Héroi". -->
+<div class="container"> <!-- Contêiner que agrupa o conteúdo da página, com estilo de sombra e opacidade definidos anteriormente. -->
+    <h1>Minhas Rotinas Diárias</h1> <!-- Outro cabeçalho dentro do contêiner para o título da seção. -->
+    <form id="rotinaForm"> <!-- Início do formulário, que será usado para adicionar tarefas à rotina. -->
+        <input type="text" id="tarefa" placeholder="Nome da tarefa"> <!-- Campo de texto para o nome da tarefa. -->
+        <input type="text" id="descricao" placeholder="Descrição da tarefa"> <!-- Campo de texto para a descrição da tarefa. -->
+        <select id="duracao"> <!-- Menu suspenso (dropdown) para selecionar a duração da tarefa. -->
+            <!-- Opções de horários disponíveis para as tarefas. -->
+            <option value="7:00-8:00">7:00 - 8:00</option>
+            <option value="8:00-9:00">8:00 - 9:00</option>
+            <option value="9:00-10:00">9:00 - 10:00</option>
+            <option value="10:00-11:00">10:00 - 11:00</option>
+            <option value="11:00-12:00">11:00 - 12:00</option>
+            <option value="12:00-13:00">12:00 - 13:00</option>
+            <option value="13:00-14:00">13:00 - 14:00</option>
+            <option value="14:00-15:00">14:00 - 15:00</option>
+            <option value="15:00-16:00">15:00 - 16:00</option>
+            <option value="16:00-17:00">16:00 - 17:00</option>
+            <option value="17:00-18:00">17:00 - 18:00</option>
+            <option value="18:00-19:00">18:00 - 19:00</option>
+            <option value="19:00-20:00">19:00 - 20:00</option>
+            <option value="20:00-21:00">20:00 - 21:00</option>
+            <option value="21:00-22:00">21:00 - 22:00</option>
+            <option value="22:00-23:00">22:00 - 23:00</option>
+            <option value="23:00-24:00">23:00 - 24:00</option>
+        </select>
+        <button type="submit">Adicionar</button> <!-- Botão de envio do formulário. Ao clicar, as tarefas serão adicionadas. -->
+    </form>
+    <ul id="rotinaList"></ul> <!-- Lista não ordenada onde as rotinas adicionadas aparecerão. -->
+</div>
+<script src="main.js"></script> <!-- Script externo em JavaScript para manipular o comportamento da página, como adicionar tarefas à lista. -->
+</body>
+</html>
