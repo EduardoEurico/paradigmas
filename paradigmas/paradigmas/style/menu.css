@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../style/hq720.jpg");
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+}
+.container{
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-gap: 1rem;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+;
+
+    grid-template-rows: 10% 1fr 10%;
+    height: 100vh;
+}
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    font-size: 1.4rem;
+    background: #002366; /* Azul para combinar com o Capitão Pátria */
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: #FFD700; /* Dourado para combinar com o Capitão Pátria */
+}
+
+.navigation a:hover {
+    background: #C8102E; /* Dourado ao passar o mouse */
+    color: #002366; /* Azul no hover para contraste */
+    font-weight: bold;
+}
+
+@media all and (max-width:800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width:600px) {
+    .navigation {
+        flex-flow: row wrap;
+        padding: 0;
+
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .navigation li:last-of-type a{
+        border-bottom: none;
+    }
+}
+
+.home-text {
+    position: relative;
+    display: inline-block;
+    color: #FFD700; /* Dourado */
+    transition: color 0.3s ease;
+}
+
+.home-text::after {
+    content: "Homelander"; /* O novo texto */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    white-space: nowrap; /* Impede quebra de linha */
+    opacity: 0; /* Começa invisível */
+    transform: scaleX(0); /* Começa com escala 0 */
+    transform-origin: left; /* Origem do crescimento à esquerda */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+.home-text:hover::after {
+    opacity: 1; /* Torna visível ao passar o mouse */
+    transform: scaleX(1); /* Aumenta a escala para 1 */
+}
+
+.home-text:hover {
+    color: transparent; /* Esconde "Home" ao passar o mouse */
+}
+
+
+
+.button button {
+    padding: 15px 30px;
+    background-color: #C8102E; /* Vermelho para representar a força do Capitão Pátria */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #9E0E22; /* Vermelho mais escuro no hover */
+}
+
+.table{
+    background: #FFFFFF;
+    max-width: 800px;
+    margin: auto;
+    padding: 45px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}

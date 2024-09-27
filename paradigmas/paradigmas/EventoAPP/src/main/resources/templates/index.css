@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../templates/1348444.jpg");
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+}
+.container {
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: 10% 1fr 10%;
+    height: 100vh;
+}
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    background: #002366; /* Azul escuro para Capitão Pátria */
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: #FFD700; /* Dourado */
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    background: #C8102E; /* Vermelho no hover */
+    color: #FFFFFF; /* Branco no hover */
+    transition: 0.3s;
+}
+
+/* Responsividade */
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navigation {
+        flex-flow: row wrap;
+        padding: 0;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}
+
+/* Título */
+.header-title {
+    text-align: center;
+    color: gold; /* Azul escuro */
+    margin-top: 20px;
+}
+
+/* Subtítulo e Link */
+.sub-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.link-cadastrar {
+    text-decoration: none;
+    color: #ff0000; /* Vermelho */
+    font-weight: bold;
+}
+
+.link-cadastrar:hover {
+    color: #9E0E22; /* Vermelho escuro no hover */
+    transition: 0.3s;
+}
+
+/* Tabela */
+.event-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-table th, .event-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.event-table thead {
+    background-color: #002366; /* Azul escuro */
+    color: #FFD700; /* Dourado */
+}
+
+.event-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.event-table tbody tr:hover {
+    background-color: #C8102E; /* Vermelho no hover */
+    color: #fff;
+}
+
+/* Classes específicas das colunas */
+.header-nome, .header-local, .header-data, .header-horario {
+    font-weight: bold;
+}
+
+.cell-nome, .cell-local, .cell-data, .cell-horario {
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    .event-table {
+        width: 100%;
+    }
+}

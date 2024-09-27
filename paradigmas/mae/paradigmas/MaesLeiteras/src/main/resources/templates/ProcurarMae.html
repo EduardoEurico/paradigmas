@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/ProcurarMae.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <ul class="navigation">
+            <a href="#" class="home-text">Home</a>
+            <li><a href="">Table</a></li>
+            <li><a href="">New</a></li>
+        </ul>
+    </header>
+    <main>
+        <table class="styled-table">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Idade</th>
+                <th>Endereço</th>
+                <th>Telefone</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Itera sobre a lista 'pessoas' -->
+            <tr th:each="pessoa : ${pessoas}">
+                <td><span th:text="${pessoa.nome}"></span></td>
+                <td><span th:text="${pessoa.sobreNome}"></span></td>
+                <td><span th:text="${pessoa.idade}"></span></td>
+                <td><span th:text="${pessoa.endereco}"></span></td>
+                <td><span th:text="${pessoa.telefone}"></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <ul class="navigation">
+            <li><a href="https://github.com/KaynanSouza" target="_blank">@KaynanSouza</a></li>
+            <li><a href="https://github.com/Felipemg05" target="_blank">@Felipemg05</a></li>
+            <li><a href="https://github.com/" target="_blank">@XXXEuricoXXX</a></li>
+            <li><a href="https://github.com/" target="_blank">@XXXRogerXXX</a></li>
+            <li><a href="https://github.com/" target="_blank">@Conti</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

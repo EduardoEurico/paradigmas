@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Eventos</title>
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!-- Import materialize.css -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/paradigmas/EventoAPP/src/main/resources/templates/index.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <ul class="navigation">
+            <li><a href="">Home</a></li>
+            <li><a href="">Eventos</a></li>
+            <li><a href="">Novo Evento</a></li>
+        </ul>
+    </header>
+    <main>
+    <h1 class="header-title">Lista de eventos</h1>
+    <h3 class="sub-header">
+        <a class="link-cadastrar" href="/cadastrarEvento">Cadastrar Evento</a>
+    </h3>
+
+    <table class="event-table">
+        <thead>
+        <tr class="table-header">
+            <th class="header-nome">Nome</th>
+            <th class="header-local">Local</th>
+            <th class="header-data">Data</th>
+            <th class="header-horario">Horário</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="table-row" th:each="evento: ${eventos}">
+            <td class="cell-nome" th:text="${evento.nome}"></td>
+            <td class="cell-local" th:text="${evento.local}"></td>
+            <td class="cell-data" th:text="${evento.data}"></td>
+            <td class="cell-horario" th:text="${evento.horario}"></td>
+        </tr>
+        </tbody>
+    </table>
+    </main>
+    <footer>
+        <ul class="navigation">
+            <li><a href="https://github.com/KaynanSouza" target="_blank">@KaynanSouza</a></li>
+            <li><a href="https://github.com/Felipemg05" target="_blank">@Felipemg05</a></li>
+            <li><a href="https://github.com/" target="_blank">@XXXEuricoXXX</a></li>
+            <li><a href="https://github.com/" target="_blank">@XXXRogerXXX</a></li>
+            <li><a href="https://github.com/" target="_blank">@Conti</a></li>
+        </ul>
+    </footer>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</div>
+</body>
+</html>

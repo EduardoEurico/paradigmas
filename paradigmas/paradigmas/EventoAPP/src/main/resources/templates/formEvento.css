@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../templates/1254260.jpg");
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+}
+
+.container {
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: 10% 1fr 10%;
+}
+
+/* Navegação */
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    background: #002366; /* Azul escuro para Capitão Pátria */
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: #FFD700; /* Dourado */
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    background: #C8102E; /* Vermelho no hover */
+    color: #FFFFFF; /* Branco no hover */
+    transition: 0.3s;
+}
+
+/* Responsividade */
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navigation {
+        flex-flow: row wrap;
+        padding: 0;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}
+
+/* Estilo dos botões */
+.button button {
+    padding: 8px 16px; /* Reduzindo o padding para um tamanho menor */
+    background-color: #C8102E; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px; /* Tamanho da fonte ajustado */
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #9E0E22; /* Vermelho escuro */
+    transform: scale(1.05);
+}
+
+/* Tabela / Formulário */
+.table {
+    background: rgba(255, 255, 255, 0.9); /* Levemente transparente para suavizar o contraste */
+    max-width: 500px; /* Diminuindo a largura do formulário */
+    margin: auto;
+    padding: 20px; /* Ajustando o padding para ficar mais confortável */
+    text-align: left; /* Alinhando texto à esquerda para formalidade */
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    display: flex; /* Habilita flexbox */
+    flex-direction: column; /* Alinha os elementos em coluna */
+}
+
+/* Inputs e Textarea */
+.table input {
+    width: 50%; /* Para preencher toda a largura disponível */
+    padding: 8px; /* Reduzindo o padding interno */
+    margin: 5px 0; /* Diminuindo o espaço entre os inputs */
+    border: 1px solid #ddd; /* Borda leve */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho de fonte consistente */
+}
+
+
+.input-field {
+    margin-bottom: 10px; /* Espaçamento à direita */
+}
+
+
+
+.button {
+    margin-top: 15px; /* Espaço reduzido acima do botão */
+    align-self: flex-end; /* Alinha o botão à direita */
+}
+
+.text h2 {
+    color: #002366; /* Azul escuro */
+    font-size: 1.5rem; /* Tamanho do cabeçalho ajustado para formalidade */
+    margin-bottom: 15px; /* Margem inferior para espaçamento */
+}
+
+.text p {
+    color: #333333;
+    font-size: 0.9rem; /* Tamanho da fonte ajustado */
+    line-height: 1.5;
+}

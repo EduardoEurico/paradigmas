@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Cadastrar Evento</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<main>
+    <div class="table">
+        <div class="text">
+            <h2>Cadastrar Novo Evento</h2>
+            <form class="container" method="post">
+                <div class="row">
+                    <div class="input-field col s6">
+                        Nome: <input type="text" value="" name="nome" />
+                    </div>
+                    <div class="input-field col s6">
+                        Local: <input type="text" value="" name="local" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s3">
+                        Data: <input type="date" value="" name="data" />
+                    </div>
+                    <div class="input-field col s3">
+                        Horário: <input type="time" value="" name="horario" />
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit" class="waves-effect waves-light btn">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

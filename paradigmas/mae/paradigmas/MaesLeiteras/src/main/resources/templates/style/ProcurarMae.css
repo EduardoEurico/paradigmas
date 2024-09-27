@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../style/1348444.jpg");
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+}
+
+.container{
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: 10% 1fr 10%;
+    height: 100vh;
+}
+
+@media all and (max-width:800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width:600px) {
+    .navigation {
+        flex-flow: row wrap;
+        padding: 0;
+
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .navigation li:last-of-type a{
+        border-bottom: none;
+    }
+}
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    font-size: 1.4rem;
+    background: #002366; /* Azul para combinar com o Capitão Pátria */
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: flex; /* Use flex para que o conteúdo se ajuste corretamente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 1em;
+    color: #FFD700; /* Dourado para combinar com o Capitão Pátria */
+    position: relative; /* Para o pseudo-elemento */
+}
+
+.navigation a:hover {
+    background: #C8102E; /* Dourado ao passar o mouse */
+    color: #002366; /* Azul no hover para contraste */
+    font-weight: bold;
+}
+
+
+
+.styled-table {
+    width: 100%; /* Largura total */
+    border-collapse: collapse; /* Colapsa bordas */
+    margin: 20px 0; /* Margem superior e inferior */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte */
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px; /* Espaçamento nas células */
+    text-align: left; /* Alinhamento à esquerda */
+    border: 1px solid #ddd; /* Borda das células */
+}
+
+.styled-table th {
+    background-color: #002366; /* Azul para o cabeçalho */
+    color: #FFD700; /* Dourado para o texto do cabeçalho */
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo alternada para linhas pares */
+}
+
+.styled-table tr:hover {
+    background-color: #C8102E; /* Cor de fundo ao passar o mouse */
+    color: white; /* Texto branco ao passar o mouse */
+}
+.table{
+    background: #FFFFFF;
+    max-width: 800px;
+    margin: auto;
+    padding: 45px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}

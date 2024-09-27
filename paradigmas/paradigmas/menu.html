@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Eventos</title>
+    <link rel="stylesheet" href="./style/menu.css">
+</head>
+
+<body>
+<Div class="container">
+    <header>
+        <ul class="navigation">
+            <li><a href=""><span class="home-text">Home</span></a></li>
+            <li><a href="/table">Table</a></li>
+            <li><a href="">New</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="table">
+            <div class="text">
+                <h2>Grupo - 01 / Java / Capitão pátria</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, aperiam. Perferendis omnis ipsa
+                    nemo minima sequi neque. Distinctio earum sunt architecto optio minima ab vitae, dolor quam natus
+                    possimus adipisci.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit iste amet! Suscipit quia
+                    optio, tempore ad eius facere, earum ipsa reprehenderit in quis dolore eaque eligendi animi.
+                    Distinctio, tenetur!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat velit omnis nulla
+                    officiis quos consequatur fugit adipisci et sequi nisi iure corporis, minima consectetur
+                    molestias, pariatur, quis earum debitis.</p>
+
+                <!-- Botão para fechar o texto -->
+
+            </div>
+
+            <div class="button">
+                <a ><button id="closeButton" class="close-button">Fechar</button></a>
+            </div>
+            <script>
+                document.getElementById('closeButton').addEventListener('click', function() {
+                    document.querySelector('.table').style.display = 'none'; // Oculta a div com a classe 'text'
+                });
+            </script>
+        </div>
+    </main>
+    <footer>
+        <ul class="navigation">
+            <li><a href="https://github.com/KaynanSouza" target="_blank">@KaynanSouza</a></li>
+            <li><a href="https://github.com/Felipemg05" target="_blank">@Felipemg05</a></li>
+            <li><a href="https://github.com/" target="_blank">@XXXEuricoXXX</a></li>
+            <li><a href="https://github.com/" target="_blank">@XXXRogerXXX</a></li>
+            <li><a href="https://github.com/" target="_blank">@Conti</a></li>
+        </ul>
+    </footer>
+</Div>
+
+</body>
+
+</html>
